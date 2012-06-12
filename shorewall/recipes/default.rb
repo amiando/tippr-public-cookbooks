@@ -88,6 +88,11 @@ if shorewall_enabled
   template "/etc/shorewall/shorewall.conf"
 end
 
+template "/etc/default/shorewall" do
+  source "shorewall.erb"
+  notifies :restart, "service[shorewall]"
+end
+
 service "shorewall" do
   supports [ :status, :restart ]
   if shorewall_enabled
