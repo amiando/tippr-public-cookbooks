@@ -19,9 +19,9 @@ override[:shorewall][:zones] = [
 ]
 
 override[:shorewall][:policy] = [
-    { :source => "fw", :dest => "all", :policy => :ACCEPT },
-    { :source => "lan", :dest => "fw", :policy => :REJECT, :log => :DEBUG },
-    { :source => "all", :dest => "all", :policy => :REJECT }
+#    { :source => "fw", :dest => "all", :policy => :ACCEPT },
+#    { :source => "lan", :dest => "fw", :policy => :REJECT, :log => :DEBUG },
+#    { :source => "all", :dest => "all", :policy => :REJECT }
 ]
 
 override[:shorewall][:interfaces] = []
@@ -29,8 +29,8 @@ override[:shorewall][:interfaces] = []
 override[:shorewall][:hosts] = []
 
 override[:shorewall][:rules] = [
-    { :description => "Incoming SSH to firewall",
-      :source => "all", :dest => :fw, :proto => :tcp, :dest_port => 22, :action => :ACCEPT }
+#    { :description => "Incoming SSH to firewall",
+#      :source => "all", :dest => :fw, :proto => :tcp, :dest_port => 22, :action => :ACCEPT }
 ]
 
 # vim: ai et sts=4 sw=4 ts=4
