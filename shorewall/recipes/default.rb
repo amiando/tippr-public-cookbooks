@@ -1,7 +1,5 @@
 require 'set'
 
-include_recipe "yumrepo::epel"
-
 package "shorewall" do
   action :install
 end
