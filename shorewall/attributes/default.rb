@@ -27,6 +27,8 @@ override[:shorewall][:interfaces] = []
 
 override[:shorewall][:hosts] = []
 
+override[:shorewall][:masq] = []
+
 override[:shorewall][:rules] = [
 #    { :description => "Incoming SSH to firewall",
 #      :source => "all", :dest => :fw, :proto => :tcp, :dest_port => 22, :action => :ACCEPT }
